@@ -18,14 +18,10 @@ def grid_search(train,holdout):
 	Grid search of best hyperparameter combinations
 	'''
 
-	# alpha = [0.01,0.1,1,10,100,1000]
-	# beta = [0.1,1,10]
-	# lambda1 = [0.001,0.01,0.1,1,1,10,100,1000]
-	# lambda2 = [0.001,0.01,0.1,1,1,10,100,1000]
-	alpha = [0.01]
-	beta = [0.1]
-	lambda1 = [0.001]
-	lambda2 = [0.1]
+	alpha = [0.01,0.1,1,10,100,1000]
+	beta = [0.1,1,10]
+	lambda1 = [0.001,0.01,0.1,1,1,10,100,1000]
+	lambda2 = [0.001,0.01,0.1,1,1,10,100,1000]
 	Dim = 2 ** 24  
 
 	results = []
@@ -132,8 +128,8 @@ def myargs():
                                      description = 
 """ 
 Train model using Per-Coordinate FTRL-Proximal algorithm.
-Hyperparameter tuning by holding out every N instance using every N for validation.
-Generate prediction results in the format of submission requirments. 
+Hyperparameter tuning by holding out every N instance for validation.
+Generate prediction results in the format of submission requirements. 
 
 \nUsage is via:
 \n
